@@ -8,11 +8,12 @@ from PyQt5.QtCore import *
 
 app = QApplication(sys.argv)
 
-class Ui_MainWindow(object):
-    def __init__(self, MainWindow):
-        self.setupUi(MainWindow)
-        self.retranslateUi(MainWindow)
 
+class Ui_MainWindow(object):
+    def __init__(self,win):
+        self.setupUi(win)
+        self.retranslateUi(win)
+    
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
@@ -47,13 +48,13 @@ class Ui_MainWindow(object):
                                  "}\n"
                                  "\n"
                                  "*[myclass=close]{\n"
-                                 "image: url(:/gui/window_close_focus2x.png)\n"
+                                 "image: url(:/gui/window_close_focus2x.png);\n"
                                  "}\n"
                                  "*[myclass=min]{\n"
-                                 "image:url(:/gui/window_minimize_focus2x.png)\n"
+                                 "image:url(:/gui/window_minimize_focus2x.png);\n"
                                  "}\n"
                                  "*[myclass=fullscreen]{\n"
-                                 "image:url(:/gui/checkbox_unchecked_focus2x.png)\n"
+                                 "image:url(:/gui/checkbox_unchecked_focus2x.png);\n"
                                  "}\n"
                                  "*[myclass=titlebar]{\n"
                                  "background: rgb(65, 65, 65);\n"
@@ -69,8 +70,8 @@ class Ui_MainWindow(object):
                                  "*[myclass=op]{\n"
                                  "background: rgb(65, 65, 65);\n"
                                  "}\n"
-                                 "*"
-                                 "[myclass=useravatar]{\n"
+                                 ""
+                                 "*[myclass=useravatar]{\n"
                                  "image:url(:/gui/OIP-C.jpg)\n"
                                  "}\n"
                                  "*[myclass=username]{\n"
@@ -81,27 +82,31 @@ class Ui_MainWindow(object):
                                  "*[myclass=userinfo]{\n"
                                  "border:0px;\n"
                                  "color:white;\n"
+                                 "image:url(:/gui/avatar.png);\n"
                                  "background:rgb(52, 52, 52);\n"
-                                 "imge:url(:/gui/avatar.png);\n"
                                  "}\n"
                                  "*[myclass=userloginout]{\n"
                                  "border:0px;\n"
                                  "color:white;\n"
+                                 "image: url(:/gui/loginout.png);\n"
                                  "background:rgb(52, 52, 52)\n"
                                  "}\n"
                                  "*[myclass=ctrlsever]{\n"
                                  "border:0px;\n"
                                  "color:white;\n"
-                                 "background:rgb(52, 52, 52)\n"
+                                 "image:url(:/gui/ctrlsever.png);\n"
+                                 "background-color:rgb(52, 52, 52);\n"
                                  "}\n"
                                  "*[myclass=history]{\n"
                                  "border:0px;\n"
                                  "color:white;\n"
+                                 "image: url(:/gui/history.png);\n"
                                  "background:rgb(52, 52, 52)\n"
                                  "}\n"
                                  "*[myclass=settings]{\n"
                                  "border:0px;\n"
                                  "color:white;\n"
+                                 "image:url(:/gui/settings.png);\n"
                                  "background:rgb(52, 52, 52)\n"
                                  "}\n"
                                  "*[myclass=username]{\n"
@@ -110,10 +115,11 @@ class Ui_MainWindow(object):
                                  "}\n"
                                  "*[myclass=userinfo]:hover{\n"
                                  "border:0px;\n"
-                                 "background:rgb(0, 160, 163);\n"
+                                 "background-color:rgb(0, 160, 163);\n"
                                  "}\n"
                                  "*[myclass=userloginout]:hover{\n"
                                  "border:0px;\n"
+                                 ""
                                  "color:red;\n"
                                  "background:rgb(0, 160, 163);\n"
                                  "}\n"
@@ -121,8 +127,7 @@ class Ui_MainWindow(object):
                                  "border:0px;\n"
                                  "background:rgb(0, 160, 163);\n"
                                  "}\n"
-                                 "*[myclass=hi"
-                                 "story]:hover{\n"
+                                 "*[myclass=history]:hover{\n"
                                  "border:0px;\n"
                                  "background:rgb(0, 160, 163);\n"
                                  "}\n"
@@ -133,6 +138,7 @@ class Ui_MainWindow(object):
                                  "*[myclass=search]{\n"
                                  "border:0;\n"
                                  "color:rgb(0, 255, 255);\n"
+                                 "image:url(:/gui/search.png);\n"
                                  "background:rgb(94, 94, 94)\n"
                                  "}\n"
                                  "*[myclass=search]:hover{\n"
@@ -161,35 +167,44 @@ class Ui_MainWindow(object):
                                  "*[myclass=opear1]{\n"
                                  "image:url(:/gui/nosever.png)\n"
                                  "}\n"
-                                 "*[myclass=tip1]{\n"
+                                 "*[myclass=tip1]{"
+                                 "\n"
                                  "color:rgb(255, 255, 255);\n"
                                  "}\n"
                                  "*[myclass=open]{\n"
                                  "border:0px;\n"
+                                 "image:url(:/gui/open.png);\n"
                                  "color:white;\n"
+                                 "border-radius: 12px;\n"
                                  "background:rgb(52, 52, 52)\n"
                                  "}\n"
                                  "*[myclass=book]{\n"
                                  "border:0px;\n"
+                                 "image:url(:/gui/help.png);\n"
                                  "color:white;\n"
-                                 ""
+                                 "border-radius: 12px;\n"
                                  "background:rgb(52, 52, 52)\n"
                                  "}\n"
                                  "*[myclass=feedback]{\n"
                                  "border:0px;\n"
                                  "color:white;\n"
+                                 "image:url(:/gui/feedback.png);\n"
+                                 "border-radius: 12px;\n"
                                  "background:rgb(52, 52, 52)\n"
                                  "}\n"
                                  "*[myclass=open]:hover{\n"
                                  "border:0px;\n"
+                                 "border-radius: 12px;\n"
                                  "background:rgb(107, 107, 107);\n"
                                  "}\n"
                                  "*[myclass=book]:hover{\n"
                                  "border:0px;\n"
+                                 "border-radius: 12px;\n"
                                  "background:rgb(107, 107, 107);\n"
                                  "}\n"
                                  "*[myclass=feedback]:hover{\n"
                                  "border:0px;\n"
+                                 "border-radius: 12px;\n"
                                  "background:rgb(107, 107, 107);\n"
                                  "}\n"
                                  "")
@@ -258,14 +273,14 @@ class Ui_MainWindow(object):
         self.op.setGeometry(QRect(0, 0, 411, 871))
         self.useravatar = QLabel(self.op)
         self.useravatar.setObjectName(u"useravatar")
-        self.useravatar.setGeometry(QRect(0, 0, 181, 161))
+        self.useravatar.setGeometry(QRect(0, 0, 171, 161))
         self.username = QLabel(self.op)
         self.username.setObjectName(u"username")
-        self.username.setGeometry(QRect(180, 0, 231, 61))
+        self.username.setGeometry(QRect(170, 0, 241, 61))
         self.username.setFont(font)
         self.userinfo = QPushButton(self.op)
         self.userinfo.setObjectName(u"userinfo")
-        self.userinfo.setGeometry(QRect(180, 60, 231, 51))
+        self.userinfo.setGeometry(QRect(170, 60, 241, 51))
         font3 = QFont()
         font3.setFamily(u"\u5fae\u8f6f\u96c5\u9ed1")
         font3.setPointSize(14)
@@ -273,7 +288,7 @@ class Ui_MainWindow(object):
         self.userinfo.setCursor(QCursor(Qt.PointingHandCursor))
         self.userloginout = QPushButton(self.op)
         self.userloginout.setObjectName(u"userloginout")
-        self.userloginout.setGeometry(QRect(180, 110, 231, 51))
+        self.userloginout.setGeometry(QRect(170, 110, 241, 51))
         self.userloginout.setFont(font)
         self.userloginout.setCursor(QCursor(Qt.PointingHandCursor))
         self.ctrlsrver = QPushButton(self.op)
@@ -286,7 +301,7 @@ class Ui_MainWindow(object):
         self.ctrlsrver.setCursor(QCursor(Qt.PointingHandCursor))
         self.history = QPushButton(self.op)
         self.history.setObjectName(u"history")
-        self.history.setGeometry(QRect(0, 361, 411, 101))
+        self.history.setGeometry(QRect(0, 360, 411, 101))
         self.history.setFont(font4)
         self.history.setCursor(QCursor(Qt.PointingHandCursor))
         self.settings = QPushButton(self.op)
@@ -377,6 +392,8 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.close.clicked.connect(MainWindow.close)
+        self.min.clicked.connect(MainWindow.showMinimized)
+        self.fullscreen.clicked.connect(MainWindow.showMaximized)
 
         QMetaObject.connectSlotsByName(MainWindow)
     # setupUi
@@ -405,8 +422,7 @@ class Ui_MainWindow(object):
             "MainWindow", u"\u641c\u7d22\u73a9\u5bb6,\u670d\u52a1\u5668...", None))
         self.searchbox.setProperty("myclass", QCoreApplication.translate(
             "MainWindow", u"searchbox", None))
-        self.pushButton.setText(QCoreApplication.translate(
-            "MainWindow", u"\u641c\u7d22", None))
+        self.pushButton.setText("")
         self.pushButton.setProperty(
             "myclass", QCoreApplication.translate("MainWindow", u"search", None))
         self.main.setProperty("myclass", QCoreApplication.translate(

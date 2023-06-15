@@ -46,13 +46,13 @@ background: rgb(85, 85, 85);
 }
 
 *[myclass=close]{
-image: url(:/gui/window_close_focus2x.png)
+image: url(:/gui/window_close_focus2x.png);
 }
 *[myclass=min]{
-image:url(:/gui/window_minimize_focus2x.png)
+image:url(:/gui/window_minimize_focus2x.png);
 }
 *[myclass=fullscreen]{
-image:url(:/gui/checkbox_unchecked_focus2x.png)
+image:url(:/gui/checkbox_unchecked_focus2x.png);
 }
 *[myclass=titlebar]{
 background: rgb(65, 65, 65);
@@ -79,27 +79,31 @@ background:rgb(52, 52, 52);
 *[myclass=userinfo]{
 border:0px;
 color:white;
+image:url(:/gui/avatar.png);
 background:rgb(52, 52, 52);
-imge:url(:/gui/avatur.png);
 }
 *[myclass=userloginout]{
 border:0px;
 color:white;
+image: url(:/gui/loginout.png);
 background:rgb(52, 52, 52)
 }
 *[myclass=ctrlsever]{
 border:0px;
 color:white;
-background:rgb(52, 52, 52)
+image:url(:/gui/ctrlsever.png);
+background-color:rgb(52, 52, 52);
 }
 *[myclass=history]{
 border:0px;
 color:white;
+image: url(:/gui/history.png);
 background:rgb(52, 52, 52)
 }
 *[myclass=settings]{
 border:0px;
 color:white;
+image:url(:/gui/settings.png);
 background:rgb(52, 52, 52)
 }
 *[myclass=username]{
@@ -108,7 +112,7 @@ color:white;
 }
 *[myclass=userinfo]:hover{
 border:0px;
-background:rgb(0, 160, 163);
+background-color:rgb(0, 160, 163);
 }
 *[myclass=userloginout]:hover{
 border:0px;
@@ -130,6 +134,7 @@ background:rgb(0, 160, 163);
 *[myclass=search]{
 border:0;
 color:rgb(0, 255, 255);
+image:url(:/gui/search.png);
 background:rgb(94, 94, 94)
 }
 *[myclass=search]:hover{
@@ -163,29 +168,38 @@ color:rgb(255, 255, 255);
 }
 *[myclass=open]{
 border:0px;
+image:url(:/gui/open.png);
 color:white;
+border-radius: 12px;
 background:rgb(52, 52, 52)
 }
 *[myclass=book]{
 border:0px;
+image:url(:/gui/help.png);
 color:white;
+border-radius: 12px;
 background:rgb(52, 52, 52)
 }
 *[myclass=feedback]{
 border:0px;
 color:white;
+image:url(:/gui/feedback.png);
+border-radius: 12px;
 background:rgb(52, 52, 52)
 }
 *[myclass=open]:hover{
 border:0px;
+border-radius: 12px;
 background:rgb(107, 107, 107);
 }
 *[myclass=book]:hover{
 border:0px;
+border-radius: 12px;
 background:rgb(107, 107, 107);
 }
 *[myclass=feedback]:hover{
 border:0px;
+border-radius: 12px;
 background:rgb(107, 107, 107);
 }
 </string>
@@ -371,7 +385,7 @@ background:rgb(107, 107, 107);
        <cursorShape>PointingHandCursor</cursorShape>
       </property>
       <property name="text">
-       <string>搜索</string>
+       <string/>
       </property>
       <property name="flat">
        <bool>false</bool>
@@ -416,7 +430,7 @@ background:rgb(107, 107, 107);
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>181</width>
+         <width>171</width>
          <height>161</height>
         </rect>
        </property>
@@ -430,9 +444,9 @@ background:rgb(107, 107, 107);
       <widget class="QLabel" name="username">
        <property name="geometry">
         <rect>
-         <x>180</x>
+         <x>170</x>
          <y>0</y>
-         <width>231</width>
+         <width>241</width>
          <height>61</height>
         </rect>
        </property>
@@ -452,9 +466,9 @@ background:rgb(107, 107, 107);
       <widget class="QPushButton" name="userinfo">
        <property name="geometry">
         <rect>
-         <x>180</x>
+         <x>170</x>
          <y>60</y>
-         <width>231</width>
+         <width>241</width>
          <height>51</height>
         </rect>
        </property>
@@ -477,9 +491,9 @@ background:rgb(107, 107, 107);
       <widget class="QPushButton" name="userloginout">
        <property name="geometry">
         <rect>
-         <x>180</x>
+         <x>170</x>
          <y>110</y>
-         <width>231</width>
+         <width>241</width>
          <height>51</height>
         </rect>
        </property>
@@ -528,7 +542,7 @@ background:rgb(107, 107, 107);
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>361</y>
+         <y>360</y>
          <width>411</width>
          <height>101</height>
         </rect>
@@ -861,5 +875,54 @@ background:rgb(107, 107, 107);
  <resources>
   <include location="kuhuduan.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>close</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1464</x>
+     <y>28</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1528</x>
+     <y>28</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>min</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showMinimized()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1404</x>
+     <y>26</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1514</x>
+     <y>8</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fullscreen</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showMaximized()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1346</x>
+     <y>26</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1506</x>
+     <y>39</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
