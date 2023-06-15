@@ -1,5 +1,5 @@
 import mcpi.minecraft as minecraft
-from PIL import Image
+from PIL import Image, ImageQt
 from gui import mainwin
 import urllib
 import urllib.request
@@ -49,6 +49,9 @@ class PlayerIcoGetter:
         times = 1
         if mode == 'zb':
             #超时检测
+            steve = open('./skin/steve.png', 'rb')
+            alex = open('./skin/alex.png', 'rb')
+            g = [steve, alex]
             while icon == None:
                 try:    
                     html = urllib.request.urlopen(getter_url.format(name=player_id, mode=mode))
@@ -59,27 +62,20 @@ class PlayerIcoGetter:
                     time.sleep(1.0)
                     times += 1
                     if times == 3:
-                        return None
+                        return Image.open(random.choice(g))
                 
                 pic = Image.open(icon)
                 pic = pic.crop((7,8,17,16))
-                pic.show()
-                pic.close()
         
         else: 
             #非正版玩家
-            steve = open('./skin/steve.png', 'rb')
-            alex = open('./skin/alex.png', 'rb')
-            g = [steve, alex]
             pic = Image.open(random.choice(g))          
-            steve.close()
-            alex.close()
         
-        return pic
+        return ImageQt.ImageQt(pic)
 
 #测试
-#l = PlayerIcoGetter(player_id='Flepis00', mode='z')
-#print(l.icon)
+# l = PlayerIcoGetter(player_id='Flepis00', mode='zb')
+# print(l.icon)
 
 class Main:
     def __init__(self, main_win=mainwin.MainWindow, **kargs):
@@ -89,7 +85,8 @@ class Main:
         self.window.start_win()
 
 if __name__ == '__main__':
-    main = mainwin.MainWindow()
-    main.start_win()
+    
+    b = Main(icon=None)
+    b.start()
     
     
