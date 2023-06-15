@@ -7,7 +7,7 @@ import urllib.parse
 import re
 import time
 import random
-
+import gui.kehuduan_rc
 
 head = {
     ':Authority' : 'o.xbottle.top' ,
