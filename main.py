@@ -47,11 +47,11 @@ class PlayerAvatarGetter:
         '''获取玩家头像'''
         icon = None
         times = 1
+        steve = open('./skin/steve.png', 'rb')
+        alex = open('./skin/alex.png', 'rb')
+        g = [steve, alex]
         if mode == 'zb':
             #超时检测
-            steve = open('./skin/steve.png', 'rb')
-            alex = open('./skin/alex.png', 'rb')
-            g = [steve, alex]
             while icon == None:
                 try:    
                     html = urllib.request.urlopen(getter_url.format(name=player_id, mode=mode))
