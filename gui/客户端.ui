@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1481</width>
-    <height>926</height>
+    <width>1428</width>
+    <height>1014</height>
    </rect>
   </property>
   <property name="focusPolicy">
@@ -20,139 +20,657 @@
    <enum>Qt::PreventContextMenu</enum>
   </property>
   <property name="windowTitle">
-   <string>1231241</string>
+   <string>mc sever GUI</string>
   </property>
   <property name="windowIcon">
-   <iconset theme="fgd"/>
+   <iconset theme="fgd">
+    <normaloff>C:/Users/VICFLEPIS/.designer/backup</normaloff>C:/Users/VICFLEPIS/.designer/backup</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*[myclass=close]{image: url(:/qss_icons/dark/rc/window_close_pressed.png);}
+QPushButton:hover {
+	
+	border:3px solid rgb(0, 255, 225); 		
+}
+
+QPushButton#historyinfo{
+	background:rgb(24, 255, 205);
+	height:100px;
+}
+QPushButton#ctrlsever{
+	background:rgb(24, 255, 205);
+	height:100px;
+}
+QPushButton#settings{
+	background:rgb(24, 255, 205);
+	height:100px;
+}
+QLineEdit{
+	border:0px;
+}
+QPushButton#close{
+	border:0px;
+}
+*[myclass=close]:hover{
+	background:rgb(255, 0, 0);
+}
+*[myclass=help]:hover{
+border:0px;	
+background:rgb(216, 216, 216);
+}
+*[myclass=fullscreen]:hover{
+border:0px;	
+background:rgb(216, 216, 216);
+}
+*[myclass=min]:hover{
+border:0px;	
+background:rgb(216, 216, 216);
+}</string>
   </property>
   <property name="toolButtonStyle">
-   <enum>Qt::ToolButtonFollowStyle</enum>
+   <enum>Qt::ToolButtonIconOnly</enum>
+  </property>
+  <property name="myclass" stdset="0">
+   <string/>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QFrame" name="frame">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>20</y>
-      <width>1431</width>
-      <height>901</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-    <widget class="QWidget" name="widget" native="true">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>60</y>
-       <width>391</width>
-       <height>831</height>
-      </rect>
-     </property>
-     <widget class="QPushButton" name="pushButton">
-      <property name="geometry">
-       <rect>
-        <x>190</x>
-        <y>10</y>
-        <width>181</width>
-        <height>51</height>
-       </rect>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QWidget" name="widget" native="true">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(66, 66, 66);</string>
       </property>
-      <property name="text">
-       <string>PushButton</string>
-      </property>
+      <widget class="QWidget" name="widget" native="true">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>50</y>
+         <width>408</width>
+         <height>981</height>
+        </rect>
+       </property>
+       <widget class="QFrame" name="frame_2">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>390</width>
+          <height>181</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QPushButton" name="myinfo">
+         <property name="geometry">
+          <rect>
+           <x>210</x>
+           <y>110</y>
+           <width>171</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="text">
+          <string>   账户信息</string>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+         <property name="myclass" stdset="0">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="loginout">
+         <property name="geometry">
+          <rect>
+           <x>210</x>
+           <y>40</y>
+           <width>171</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="text">
+          <string>    退出登录</string>
+         </property>
+         <property name="default">
+          <bool>false</bool>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+         <property name="myclass" stdset="0">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>30</y>
+           <width>151</width>
+           <height>141</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap>C:/Users/VICFLEPIS/Desktop/OIP-C.jpg</pixmap>
+         </property>
+         <property name="myclass" stdset="0">
+          <string/>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_3">
+        <property name="geometry">
+         <rect>
+          <x>9</x>
+          <y>187</y>
+          <width>364</width>
+          <height>351</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QPushButton" name="ctrlsever">
+           <property name="baseSize">
+            <size>
+             <width>52</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>微软雅黑</family>
+             <pointsize>16</pointsize>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+           <property name="text">
+            <string>                                 管理服务器</string>
+           </property>
+           <property name="checkable">
+            <bool>false</bool>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+           <property name="myclass" stdset="0">
+            <string/>
+           </property>
+           <property name="ctrlsever" stdset="0">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="settings">
+           <property name="font">
+            <font>
+             <family>微软雅黑</family>
+             <pointsize>16</pointsize>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string>                       设置</string>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+           <property name="myclass" stdset="0">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="historyinfo">
+           <property name="font">
+            <font>
+             <family>微软雅黑</family>
+             <pointsize>16</pointsize>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string>                                    历史统计信息</string>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+           <property name="myclass" stdset="0">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QFrame" name="frame_4">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>910</y>
+          <width>381</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLabel" name="contribute">
+           <property name="font">
+            <font>
+             <family>微软雅黑</family>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string>赞助...</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="about">
+           <property name="font">
+            <font>
+             <family>微软雅黑</family>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string>关于MCSEVERGUI...</string>
+           </property>
+           <property name="textFormat">
+            <enum>Qt::PlainText</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <zorder>frame_4</zorder>
+       <zorder>frame_3</zorder>
+       <zorder>frame_2</zorder>
+      </widget>
+      <widget class="QWidget" name="opreation_window" native="true">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>60</y>
+         <width>981</width>
+         <height>831</height>
+        </rect>
+       </property>
+       <widget class="QGraphicsView" name="monitor">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>981</width>
+          <height>831</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="contextMenuPolicy">
+         <enum>Qt::DefaultContextMenu</enum>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="backgroundBrush">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="search">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>535</x>
+         <y>10</y>
+         <width>91</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="text">
+        <string>搜索</string>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+       <property name="myclass" stdset="0">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="searchbox">
+       <property name="geometry">
+        <rect>
+         <x>22</x>
+         <y>9</y>
+         <width>601</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit havor{
+	border:3px soild rgb(6, 243, 255);
+}</string>
+       </property>
+       <property name="inputMask">
+        <string/>
+       </property>
+       <property name="maxLength">
+        <number>32767</number>
+       </property>
+       <property name="dragEnabled">
+        <bool>false</bool>
+       </property>
+       <property name="placeholderText">
+        <string>搜索玩家,服务器,活动记录*</string>
+       </property>
+       <property name="myclass" stdset="0">
+        <string>searchbox</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="close">
+       <property name="geometry">
+        <rect>
+         <x>1360</x>
+         <y>-1</y>
+         <width>51</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image: url(:/qss_icons/dark/rc/window_close_pressed.png);
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+       <property name="myclass" stdset="0">
+        <string>close</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="fullscreen">
+       <property name="geometry">
+        <rect>
+         <x>1313</x>
+         <y>-1</y>
+         <width>50</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image: url(:/qss_icons/dark/rc/line_horizontal_pressed.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+       <property name="myclass" stdset="0">
+        <string>fullscreen</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="min">
+       <property name="geometry">
+        <rect>
+         <x>1266</x>
+         <y>-1</y>
+         <width>50</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image:url(:/qss_icons/dark/rc/checkbox_unchecked_pressed.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+       <property name="myclass" stdset="0">
+        <string>min</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="help">
+       <property name="geometry">
+        <rect>
+         <x>1219</x>
+         <y>-1</y>
+         <width>50</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>?</string>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+       <property name="myclass" stdset="0">
+        <string>help</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="widget_2" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1411</width>
+         <height>1021</height>
+        </rect>
+       </property>
+       <widget class="QLabel" name="label_2">
+        <property name="geometry">
+         <rect>
+          <x>-20</x>
+          <y>0</y>
+          <width>1431</width>
+          <height>1001</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background:rgb(111, 111, 111)</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1221</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+      </widget>
+      <zorder>widget_2</zorder>
+      <zorder>widget</zorder>
+      <zorder>opreation_window</zorder>
+      <zorder>searchbox</zorder>
+      <zorder>search</zorder>
+      <zorder>fullscreen</zorder>
+      <zorder>min</zorder>
+      <zorder>help</zorder>
+      <zorder>close</zorder>
      </widget>
-     <widget class="QFrame" name="frame_2">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>10</y>
-        <width>161</width>
-        <height>111</height>
-       </rect>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_2">
-      <property name="geometry">
-       <rect>
-        <x>190</x>
-        <y>60</y>
-        <width>181</width>
-        <height>51</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>PushButton</string>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="widget_2" native="true">
-     <property name="geometry">
-      <rect>
-       <x>430</x>
-       <y>60</y>
-       <width>981</width>
-       <height>831</height>
-      </rect>
-     </property>
-    </widget>
-    <widget class="QTextEdit" name="textEdit">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>10</y>
-       <width>1291</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>微软雅黑</family>
-       <pointsize>12</pointsize>
-       <weight>75</weight>
-       <italic>true</italic>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="cursor" stdset="0">
-      <cursorShape>IBeamCursor</cursorShape>
-     </property>
-     <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;二哥大哥&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-     <property name="whatsThis">
-      <string/>
-     </property>
-     <property name="accessibleName">
-      <string extracomment="ddgfgdge "/>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_3">
-     <property name="geometry">
-      <rect>
-       <x>1314</x>
-       <y>12</y>
-       <width>91</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>PushButton</string>
-     </property>
-    </widget>
-   </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
- <resources/>
- <connections/>
+ <tabstops>
+  <tabstop>close</tabstop>
+  <tabstop>fullscreen</tabstop>
+  <tabstop>min</tabstop>
+  <tabstop>help</tabstop>
+  <tabstop>search</tabstop>
+  <tabstop>searchbox</tabstop>
+  <tabstop>monitor</tabstop>
+  <tabstop>loginout</tabstop>
+  <tabstop>myinfo</tabstop>
+  <tabstop>ctrlsever</tabstop>
+  <tabstop>settings</tabstop>
+  <tabstop>historyinfo</tabstop>
+ </tabstops>
+ <resources>
+  <include location="C:/Users/VICFLEPIS/Desktop/qt-material/docs/resource.qrc"/>
+  <include location="C:/Users/VICFLEPIS/Desktop/QDarkStyleSheet-master/qdarkstyle/dark/darkstyle.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>close</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1389</x>
+     <y>40</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>666</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fullscreen</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1344</x>
+     <y>34</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1499</x>
+     <y>4</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>min</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showFullScreen()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1313</x>
+     <y>29</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1465</x>
+     <y>8</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <signal>movewindow(object)</signal>
+  <slot>move()</slot>
+ </slots>
 </ui>
