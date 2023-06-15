@@ -2,8 +2,8 @@
   <qresource prefix="gui">
     <file>nosever.png</file>
     <file>OIP-C.jpg</file>
-    <file>avatur.png</file>
     <file>checkbox_unchecked_focus2x.png</file>
+    <file>avatar.png</file>
     <file>window_close_focus2x.png</file>
     <file>window_minimize_focus2x.png</file>
   </qresource>

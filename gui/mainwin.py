@@ -82,7 +82,7 @@ class Ui_MainWindow(object):
                                  "border:0px;\n"
                                  "color:white;\n"
                                  "background:rgb(52, 52, 52);\n"
-                                 "imge:url(./gui/avatur.png);\n"
+                                 "imge:url(./gui/avatar.png);\n"
                                  "}\n"
                                  "*[myclass=userloginout]{\n"
                                  "border:0px;\n"

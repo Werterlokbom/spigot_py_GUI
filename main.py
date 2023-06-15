@@ -31,7 +31,7 @@ head = {
 
 getter_url = "https://o.xbottle.top/bottleskin/process.php?nid={name}&method={mode}"
 
-class PlayerIcoGetter:
+class PlayerAvatarGetter:
     '''获得玩家的头像'''
     def __init__(self, player_id : str, mode: str) -> None:
         self.send_url = getter_url
