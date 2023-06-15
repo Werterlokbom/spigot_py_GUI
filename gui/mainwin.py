@@ -5,8 +5,8 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import QApplication
 from PyQt5.QtCore import *
 
-app = QApplication(sys.argv)
 
+app = QApplication(sys.argv)
 
 class Ui_MainWindow(object):
     def __init__(self, MainWindow):
