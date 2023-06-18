@@ -25,10 +25,15 @@ app = QApplication(sys.argv)
 
 
 class Ui_MainWindow(object):
-    def __init__(self,win):
-        self.setupUi(win)
-        self.retranslateUi(win)
-    
+    def __init__(self,win: QMainWindow):
+        self.win = win
+        self.setupUi(self.win)
+        self.retranslateUi(self.win)
+        print(self.win.size())
+        self.win.mousePressEvent = self.mousePressEvent
+        self.win.mouseMoveEvent = self.mouseMoveEvent
+        self.win.mouseReleaseEvent = self.mouseReleaseEvent
+
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
@@ -523,6 +528,21 @@ class Ui_MainWindow(object):
             "MainWindow", u"feedback", None))
         MainWindow.setWindowFlag(Qt.FramelessWindowHint)
     # retranslateUi
+    
+    def mousePressEvent(self, event: QMouseEvent):
+        if event.button() == Qt.LeftButton:
+            self.ismoving = True
+            self.start_point = event.globalPos()
+            self.window_point = self.win.frameGeometry().topLeft()
+        print(event.pos())
+    
+    def mouseMoveEvent(self, event: QMouseEvent):
+        if self.ismoving:
+            relpos = event.globalPos() - self.start_point
+            self.win.move(self.window_point + relpos)     
+    
+    def mouseReleaseEvent(self, event: QMouseEvent):
+        self.ismoving = False
 
 
 class MainWindow(QMainWindow):
